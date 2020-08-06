@@ -4,7 +4,7 @@ import styles from "./Footer.scss";
 import classNames from "classnames/bind";
 import consts from "src/constants/consts";
 
-import footerLogo from "src/assets/footer/logo.png";
+import footerLogo from "src/assets/footer/HSC_footer.png";
 import googleIcon from "src/assets/footer/playstore_btn.svg";
 import iosIcon from "src/assets/footer/appstore_btn.svg";
 import webWalletIcon from "src/assets/footer/wallet_btn.svg";
@@ -23,56 +23,29 @@ export default function(props) {
 					<a>
 						<img src={footerLogo} alt='cosmostation_logo' />
 					</a>
-					{/* <div className={cx("wallet-link-wrapper")}>
-						<p className={cx("title")}>Download Cosmostation Wallet</p>
-						<div className={cx("btn-wrapper")}>
-							<a href={consts.LINK.GOOGLE} target='_blank' rel='noopener noreferrer'>
-								<div className={cx("wallet-link-btn")}>
-									<img src={googleIcon} alt='playstore' />
-								</div>
-							</a>
-							<a href={consts.LINK.IOS} target='_blank' rel='noopener noreferrer'>
-								<div className={cx("wallet-link-btn")}>
-									<img src={iosIcon} alt='appstore' />
-								</div>
-							</a>
-							<a href={consts.LINK.IOS} target='_blank' rel='noopener noreferrer'>
-								<div className={cx("wallet-link-btn", "web")}>
-									<img className={cx("web-icon")} src={webWalletIcon} alt='webwallet' />
-									<span className={cx("web-title")}>Web Wallet</span>
-								</div>
-							</a>
-						</div>
-					</div> */}
+					<div className={cx("wallet-link-wrapper")}>
+						<p className={cx("title")}>HSCHAIN, THE NEXT GENERATION BLOCKCHAIN</p>
+					</div>
 				</div>
 
 				<div className={cx("footer-right")}>
-					{/* <ul className={cx("social")}>
+					<ul className={cx("social")}>
 						<li>
-							<a rel='noopener noreferrer' href='https://github.com/cosmostation' id='github' title='Github' target='_blank'>
+							{/* <a rel='noopener noreferrer' href='https://github.com/hschain' id='github' title='Github' target='_blank'> */}
+							<a rel='noopener noreferrer' href='' id='github' title='Github' target='_blank'>
 								<img src={githubIcon} alt='github' />
 							</a>
 						</li>
 						<li>
-							<a rel='noopener noreferrer' href='https://medium.com/cosmostation' id='medium' title='Medium' target='_blank'>
-								<img src={mediumIcon} alt='medium' />
-							</a>
-						</li>
-						<li>
-							<a rel='noopener noreferrer' href='https://t.me/cosmostation' id='telegram' title='Telegram' target='_blank'>
-								<img src={telegramIcon} alt='telegram' />
-							</a>
-						</li>
-						<li>
-							<a rel='noopener noreferrer' href='mailto:support@cosmostation.io' id='mail' title='Mail' target='_blank'>
+							{/* <a rel='noopener noreferrer' href='mailto:support@hschain.io' id='mail' title='Mail' target='_blank'> */}
+							<a rel='noopener noreferrer' href='' id='mail' title='Mail' target='_blank'>
 								<img src={emailIcon} alt='email' />
 							</a>
 						</li>
-					</ul> */}
+					</ul>
 					<div className={cx("rights")}>
-						<div className={cx("footer-copyright")} onClick={e => window.open(consts.LINK.COSMOSTATION)}>
-							© CØSMOSTATION 2020
-						</div>
+						{/* <div className={cx("footer-copyright")} onClick={e => window.open(consts.LINK.HSCHAIN)}> */}
+						<div className={cx("footer-copyright")}>© HSChain 2020</div>
 					</div>
 				</div>
 			</div>

@@ -6,10 +6,12 @@ import txs from "src/assets/header/transations_ic_none.svg";
 import txsOn from "src/assets/header/transations_ic.svg";
 import assets from "src/assets/header/assets_ic_none.svg";
 import assetsOn from "src/assets/header/assets_ic.svg";
-import dex from "src/assets/header/dex_ic_none.svg";
-import dexOn from "src/assets/header/dex_ic.svg";
+// import dex from "src/assets/header/dex_ic_none.svg";
+// import dexOn from "src/assets/header/dex_ic.svg";
 
 export default {
-	on: [dashboardOn, blocksOn, txsOn, assetsOn, dexOn],
-	off: [dashboard, blocks, txs, assets, dex],
+	// on: [dashboardOn, blocksOn, txsOn, assetsOn, dexOn],
+	// off: [dashboard, blocks, txs, assets, dex],
+	on: [dashboardOn, blocksOn, txsOn, assetsOn],
+	off: [dashboard, blocks, txs, assets],
 };

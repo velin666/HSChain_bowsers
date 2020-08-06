@@ -4,7 +4,7 @@
 .footerWrapper {
 	width: 100%;
 	height: var(--heightFooter);
-	background: var(--colorFooterBG);
+	background: linear-gradient(132deg, #171207 0%, #092035 100%);
 	overflow-x: hidden;
 
 	@include media("<medium") {
@@ -42,8 +42,7 @@
 			justify-content: space-between;
 
 			img {
-				// width: 160px;
-				width: 80px;
+				width: 160px;
 			}
 
 			@include media("<medium") {

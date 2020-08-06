@@ -16,11 +16,14 @@ import iris from "src/assets/header/iris_token.svg";
 import kava from "src/assets/header/kava_token.svg";
 import cosmos from "src/assets/header/atom_token.svg";
 import logo from "src/assets/header/HSTLOGO.png";
+import hschain_devnet from "src/assets/header/hschain_devnet.png";
 
 const cx = cn.bind(styles);
 
-const avaliableNetworks = ["cosmos", "iris", "kava", "binance"];
-const tokenImg = [cosmos, iris, kava, binance];
+// const avaliableNetworks = ["cosmos", "iris", "kava", "binance"];
+const avaliableNetworks = ["hschain"];
+// const tokenImg = [cosmos, iris, kava, binance];
+const tokenImg = [hschain_devnet];
 
 export default function(props) {
 	const history = useHistory();
@@ -28,11 +31,19 @@ export default function(props) {
 
 	const toMain = useCallback(() => history.push("/"), [history]);
 
+	// const handleChange = useCallback(
+	// 	network => {
+	// 		if (network === "cosmos") window.open(consts.MINTSCAN_URL.COSMOS, "_blank");
+	// 		else if (network === "kava") window.open(consts.MINTSCAN_URL.KAVA, "_blank");
+	// 		else if (network === "iris") window.open(consts.MINTSCAN_URL.IRIS, "_blank");
+	// 		setOpen(v => !v);
+	// 	},
+	// 	[setOpen]
+	// );
+
 	const handleChange = useCallback(
 		network => {
-			if (network === "cosmos") window.open(consts.MINTSCAN_URL.COSMOS, "_blank");
-			else if (network === "kava") window.open(consts.MINTSCAN_URL.KAVA, "_blank");
-			else if (network === "iris") window.open(consts.MINTSCAN_URL.IRIS, "_blank");
+			history.push("/");
 			setOpen(v => !v);
 		},
 		[setOpen]
@@ -51,9 +62,12 @@ export default function(props) {
 							<div className={cx("net-select-wrapper")}>
 								<button className={cx("select-btn")} onClick={() => setOpen(v => !v)}>
 									<div className={cx("curr-net-wrapper")}>
-										<div className={cx("net-icon")} style={{backgroundImage: `url(${binance})`}} />
+										<div className={cx("net-icon")} style={{backgroundImage: `url(${tokenImg[0]})`}} />
 										{/* {consts.NETWORK.BINANCE} */}
-										hschain-devnet
+										{(() => {
+											console.log(2222222);
+										})()}
+										hschain
 									</div>
 									<img className={cx("arrow-icon", {upsideDown: open})} src={dropdownArrow} alt={"none"} />
 								</button>
@@ -69,12 +83,33 @@ export default function(props) {
 														return consts.NETWORK.KAVA;
 													case "binance":
 														return consts.NETWORK.BINANCE;
+													case "hschain":
+														return "hschain";
 													default:
 														return consts.NETWORK.COSMOS;
 												}
 											})()}
 										</div>
 									))}
+									{/* {_.map(avaliableNetworks, (network, idx) => (
+										<div className={cx("select-item")} key={network} onClick={() => handleChange(network)}>
+											<div className={cx("net-icon")} style={{backgroundImage: `url(${tokenImg[idx]}`}} />
+											{(() => {
+												console.log(idx);
+												console.log(consts);
+												switch (network) {
+													case "iris":
+														return consts.NETWORK.IRIS;
+													case "kava":
+														return consts.NETWORK.KAVA;
+													case "binance":
+														return consts.NETWORK.BINANCE;
+													default:
+														return consts.NETWORK.COSMOS;
+												}
+											})()}
+										</div>
+									))} */}
 								</div>
 							</div>
 							<SearchArea propCx={cx} dropdownStyle={{position: "fixed", width: "459px"}} />

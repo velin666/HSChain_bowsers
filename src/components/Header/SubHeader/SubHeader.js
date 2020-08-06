@@ -14,6 +14,7 @@ const cx = cn.bind(styles);
 const routes = Object.freeze(_.map(consts.MENU, v => v.route));
 
 const checkCurrentRoute = (route, pathname) => {
+	console.log(1111111);
 	if (route === "/") return pathname === "/";
 	else if (_.includes(pathname, route)) return true;
 	else if (_.isEqual(route, "/dashboard") && _.every(routes, v => !_.includes(pathname, v))) return true;
@@ -27,10 +28,10 @@ export default function(props) {
 	const handleClick = useCallback(
 		(e, route) => {
 			if (_.isEqual(window.location.pathname, route)) e.preventDefault();
-			if (route === "/dex") {
-				e.preventDefault();
-				window.open(consts.LINK.BINANCEDEX, "_blank");
-			}
+			// if (route === "/dex") {
+			// 	e.preventDefault();
+			// 	window.open(consts.LINK.BINANCEDEX, "_blank");
+			// }
 			setNavBarOpen(false);
 		},
 		[setNavBarOpen]
