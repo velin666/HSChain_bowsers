@@ -1,4 +1,4 @@
-import React, {useCallback, useMemo} from "react";
+import React, {useCallback, useMemo, useState} from "react";
 import cn from "classnames/bind";
 import styles from "./SubHeader.scss";
 import {NavLink} from "react-router-dom";
@@ -22,9 +22,11 @@ const checkCurrentRoute = (route, pathname) => {
 
 export default function(props) {
 	const {navBarOpen, setNavBarOpen} = props;
+	const [updateFlag, setUpdateFlag] = useState(false);
 	const history = useHistory();
 	const handleClick = useCallback(
 		(e, route) => {
+			setUpdateFlag(!updateFlag);
 			if (_.isEqual(window.location.pathname, route)) e.preventDefault();
 			// if (route === "/dex") {
 			// 	e.preventDefault();
@@ -32,7 +34,7 @@ export default function(props) {
 			// }
 			setNavBarOpen(false);
 		},
-		[setNavBarOpen]
+		[setNavBarOpen, updateFlag]
 	);
 
 	const render = useCallback(
@@ -45,8 +47,7 @@ export default function(props) {
 							console.log(2);
 							return (
 								<NavLink className={cx("nav-item")} key={idx} to={v.route} onClick={e => handleClick(e, v.route)}>
-									{/* <img src={check ? svg.on[idx] : svg.off[idx]} alt={"none"} /> */}
-									<img src={svg.off[idx]} alt={"none"} />
+									<img src={check ? svg.on[idx] : svg.off[idx]} alt={"none"} />
 									<h2 className={cx("nav-item-title", {selected: check})}>{v.display}</h2>
 								</NavLink>
 							);

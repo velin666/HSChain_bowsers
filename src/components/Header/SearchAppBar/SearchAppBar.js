@@ -15,7 +15,7 @@ import hschain from "src/assets/header/chain_ic.svg";
 import iris from "src/assets/header/iris_token.svg";
 import kava from "src/assets/header/kava_token.svg";
 import cosmos from "src/assets/header/atom_token.svg";
-import logo from "src/assets/header/HSTLOGO.png";
+import logo from "src/assets/header/hstlogo.png";
 import hschain_devnet from "src/assets/header/hschain_devnet.png";
 
 const cx = cn.bind(styles);
