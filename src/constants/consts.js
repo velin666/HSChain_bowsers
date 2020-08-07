@@ -8,7 +8,7 @@ export default Object.freeze({
 	DEFAULT_ARRAY: [],
 	// API_HSCHAIN_DEX: "https://www.hschain.org/en/trade",
 	// API_HSCHAIN_ACCELERATED: ["https://dex-asiapacific.hschain.org/api/v1", "https://dex-atlantic.hschain.org/api/v1", "https://dex-european.hschain.org/api/v1"],
-	API_HSCHAIN_ACCELERATED: ["https://devnet.hschain.io/api/v1", "https://devnet.hschain.io/api/v1", "https://devnet.hschain.io/api/v1"],
+	API_HSCHAIN_ACCELERATED: ["https://devnet.hschain.io/v1", "https://devnet.hschain.io/v1", "https://devnet.hschain.io/v1"],
 	HSCHAIN_API_ENDPOINTS: {
 		TX: tx => `/tx/${tx}?format=json`,
 	},

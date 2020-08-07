@@ -26,8 +26,8 @@ export default function(props) {
 	const history = useHistory();
 	const handleClick = useCallback(
 		(e, route) => {
-			setUpdateFlag(!updateFlag);
-			if (_.isEqual(window.location.pathname, route)) e.preventDefault();
+			_.isEqual(window.location.pathname, route) ? e.preventDefault() : setUpdateFlag(!updateFlag);
+			// if (_.isEqual(window.location.pathname, route)) e.preventDefault();
 			// if (route === "/dex") {
 			// 	e.preventDefault();
 			// 	window.open(consts.LINK.HSCHAINDEX, "_blank");
@@ -44,7 +44,6 @@ export default function(props) {
 					<Grid item className={cx("navi")}>
 						{_.map(consts.MENU, (v, idx) => {
 							const check = checkCurrentRoute(v.route, pathname);
-							console.log(2);
 							return (
 								<NavLink className={cx("nav-item")} key={idx} to={v.route} onClick={e => handleClick(e, v.route)}>
 									<img src={check ? svg.on[idx] : svg.off[idx]} alt={"none"} />
