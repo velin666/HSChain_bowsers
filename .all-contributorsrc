@@ -1,5 +1,5 @@
 {
-  "projectName": "mintscan-binance-dex-frontend",
+  "projectName": "mintscan-hschain-dex-frontend",
   "projectOwner": "Cosmostation",
   "repoType": "github",
   "repoHost": "https://github.com",
@@ -11,10 +11,10 @@
   "commitConvention": "eslint",
   "contributors": [
     {
-      "login": "binance-exchange",
-      "name": "binance-exchange",
+      "login": "hschain-exchange",
+      "name": "hschain-exchange",
       "avatar_url": "https://avatars2.githubusercontent.com/u/32770468?v=4",
-      "profile": "https://github.com/binance-exchange",
+      "profile": "https://github.com/hschain-exchange",
       "contributions": [
         "financial"
       ]

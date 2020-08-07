@@ -1,7 +1,7 @@
 
 # Contributing
 
-We would love your help and feedback to make Mintscan for Binance DEX better!
+We would love your help and feedback to make Mintscan for hschain DEX better!
 
 If you'd like to contribute, please [open an issue][open-issue]
 describing your proposal &mdash; discussing changes to the explorer ahead of time effectively aids the PR review process.

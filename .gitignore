@@ -17,7 +17,7 @@ yarn.lock
 
 # misc
 .env
-.env.binance
+.env.hschain
 .env.cosmos
 .env.kava
 .env.iris

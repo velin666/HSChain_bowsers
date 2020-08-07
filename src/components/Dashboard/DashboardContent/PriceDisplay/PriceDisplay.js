@@ -20,7 +20,7 @@ export default function(props) {
 	// React.useEffect(() => {
 	// 	const cancelToken = axios.CancelToken;
 	// 	const source = cancelToken.source();
-	// 	dispatch(getCryptoBasicData("binancecoin", "usd", source.token));
+	// 	dispatch(getCryptoBasicData("hschaincoin", "usd", source.token));
 	// 	dispatch(getCryptoStatus(source.token));
 	// 	return () => {
 	// 		source.cancel("cleanup cancel");
@@ -43,7 +43,7 @@ export default function(props) {
 				</div>
 				<div className={cx("price")}>{status?.price ? `$${status?.price}` : <Skeleton width={"92px"} height={"34px"} />}</div>
 				<div className={cx("volume24h-wrapper")}>
-					{/* <button onClick={e => window.open(consts.LINK.COINGECKO_BINANCE, "_blank")}> */}
+					{/* <button onClick={e => window.open(consts.LINK.COINGECKO_HSCHAIN, "_blank")}> */}
 					<button>
 						{/*<div className={cx("text")}>coingecko</div>*/}
 						coingecko

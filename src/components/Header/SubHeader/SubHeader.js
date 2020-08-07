@@ -14,7 +14,6 @@ const cx = cn.bind(styles);
 const routes = Object.freeze(_.map(consts.MENU, v => v.route));
 
 const checkCurrentRoute = (route, pathname) => {
-	console.log(1111111);
 	if (route === "/") return pathname === "/";
 	else if (_.includes(pathname, route)) return true;
 	else if (_.isEqual(route, "/dashboard") && _.every(routes, v => !_.includes(pathname, v))) return true;
@@ -24,13 +23,12 @@ const checkCurrentRoute = (route, pathname) => {
 export default function(props) {
 	const {navBarOpen, setNavBarOpen} = props;
 	const history = useHistory();
-
 	const handleClick = useCallback(
 		(e, route) => {
 			if (_.isEqual(window.location.pathname, route)) e.preventDefault();
 			// if (route === "/dex") {
 			// 	e.preventDefault();
-			// 	window.open(consts.LINK.BINANCEDEX, "_blank");
+			// 	window.open(consts.LINK.HSCHAINDEX, "_blank");
 			// }
 			setNavBarOpen(false);
 		},
@@ -44,9 +42,11 @@ export default function(props) {
 					<Grid item className={cx("navi")}>
 						{_.map(consts.MENU, (v, idx) => {
 							const check = checkCurrentRoute(v.route, pathname);
+							console.log(2);
 							return (
 								<NavLink className={cx("nav-item")} key={idx} to={v.route} onClick={e => handleClick(e, v.route)}>
-									<img src={check ? svg.on[idx] : svg.off[idx]} alt={"none"} />
+									{/* <img src={check ? svg.on[idx] : svg.off[idx]} alt={"none"} /> */}
+									<img src={svg.off[idx]} alt={"none"} />
 									<h2 className={cx("nav-item-title", {selected: check})}>{v.display}</h2>
 								</NavLink>
 							);

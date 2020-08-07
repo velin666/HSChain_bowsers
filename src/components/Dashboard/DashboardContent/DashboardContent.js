@@ -20,17 +20,17 @@ const cardData = Object.freeze([
 		svg: exchangeSVG,
 		title: "Exchange",
 		content: "Blockchain and crypto asset exchange",
-		link: "https://www.binance.org/en/trade",
+		link: "https://www.hschain.org/en/trade",
 	},
 	{
 		svg: dexSVG,
-		title: "Binance DEX",
+		title: "hschain DEX",
 		content: "decentralized digital asset exchange",
-		link: "https://www.binance.org/",
+		link: "https://www.hschain.org/",
 	},
 	{
 		svg: jexSVG,
-		title: "Binance JEX",
+		title: "hschain JEX",
 		content: "Bitcoin futures & Crypto options",
 		link: "https://www.jex.com/",
 	},
@@ -38,7 +38,7 @@ const cardData = Object.freeze([
 		svg: launchpadSVG,
 		title: "Launchpad",
 		content: "Token launch platform",
-		link: "https://launchpad.binance.com/",
+		link: "https://launchpad.hschain.com/",
 	},
 ]);
 
